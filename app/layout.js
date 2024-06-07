@@ -1,4 +1,17 @@
 import "./globals.css";
+import { Nunito, Open_Sans } from 'next/font/google'
+
+const nunito = Nunito({
+    subsets: ['latin'],
+    display: "swap",
+    variable: '--font-nunito',
+})
+
+const sans = Open_Sans({
+  subsets: ['latin'],
+  display: "swap",
+  variable: '--font-sans',
+})
 
 export const metadata = {
   title: "Project X",
@@ -19,7 +32,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pl">
+    <html lang="pl" className={`${nunito.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
   );
