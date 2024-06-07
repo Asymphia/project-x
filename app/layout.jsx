@@ -30,10 +30,12 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="pl" className={`${nunito.variable} ${sans.variable}`}>
       <body>{children}</body>
     </html>
-  );
+  )
 }
+
+export default RootLayout
