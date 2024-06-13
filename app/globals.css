@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-nunito font-bold text-4xl text-dark-grey
+    }
+    h4 {
+        @apply font-nunito font-bold text-lg text-dark-grey
+    }
+    p.secondary {
+        @apply font-sans font-regular text-sm text-grey;
+    }
+}
