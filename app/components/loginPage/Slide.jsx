@@ -1,8 +1,11 @@
+"use client"
+
 import slide1 from '/public/loginPage/slide1.svg'
 import slide2 from '/public/loginPage/slide2.svg'
 import slide3 from '/public/loginPage/slide3.svg'
 import { motion } from "framer-motion"
 import Image from "next/image"
+import {useEffect, useState} from "react";
 
 const slides = [
     { photo: slide1, desc: 'Lorem ipsum dolor sit amet' },

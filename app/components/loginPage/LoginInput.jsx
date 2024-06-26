@@ -1,4 +1,4 @@
-const LoginInput = ({ type, placeholder, value, onChange, icon, error }) => {
+const LoginInput = ({ type, placeholder, value, onChange, error, disabled }) => {
     return (
         <div className={`group w-full border-2 flex flex-nowrap gap-base items-center rounded-lg px-xl transition-all 
                         ${error.type === type ? "border-red-900 bg-v-light-grey focus-within:border-red-950" : 
@@ -14,6 +14,7 @@ const LoginInput = ({ type, placeholder, value, onChange, icon, error }) => {
                 type={type}
                 value={value}
                 placeholder={placeholder}
+                disabled={disabled}
                 onChange={(e) => onChange(e)}
             />
         </div>

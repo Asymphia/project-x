@@ -10,14 +10,14 @@ const SliderContainer = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrent((prev) => (prev >= 2 ? 0 : prev + 1))
+            setCurrent((prev) => (prev >= 2 ? 0 : (prev === 1 ? 2 : 1)))
         }, 5000)
 
         return () => clearInterval(interval)
     }, [])
 
     return (
-        <div className="bg-green h-full rounded-l-lg w-full flex flex-col justify-center gap-3xl">
+        <div className="flex bg-green h-full rounded-l-lg w-full flex-col justify-center gap-3xl">
             <AnimatePresence mode="wait">
                 <Slide key={current} number={current} />
             </AnimatePresence>

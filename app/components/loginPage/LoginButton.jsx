@@ -20,7 +20,8 @@ const LoginButton = ({ isSend, isSending }) => {
 
     return (
         <motion.button
-            className="font-sans font-semibold text-sm text-white w-fit px-[90px] h-[60px] w-[235px] py-lg rounded-lg m-auto mt-4xl flex gap-sm relative overflow-hidden"
+            type="submit"
+            className="font-sans font-semibold text-sm text-white px-5xl h-4xl md:w-[260px] w-[180px] py-lg rounded-lg m-auto mt-4xl flex gap-sm relative overflow-hidden"
             initial={{ scale: 1.0, backgroundColor: "#222222" }}
             whileHover={ !isSend && !isSending && { scale: 1.05, backgroundColor: "#727272" }}
             whileTap={ !isSend && !isSending && { scale: 0.95 }}
@@ -28,15 +29,13 @@ const LoginButton = ({ isSend, isSending }) => {
             animate={ isSend ? { backgroundColor: "#13AE85", scale: 1.0 } : ( isSending ? { backgroundColor: "#727272", scale: 1.0 } : { backgroundColor: "#222222" } )}
         >
             <motion.svg
-                width="235"
-                height="60"
-                viewBox="0 0 235 60"
-                className="absolute inset-0 pointer-events-none"
+                className="absolute inset-0 pointer-events-none md:w-[260px] w-[180px] h-4xl"
                 initial={{ display: "none", opacity: "0%" }}
                 animate={ isSending ? { display: "block", opacity: "100%" } : { display: "none", opacity: "0%" }}
             >
                 <motion.rect
-                    x="1" y="1" width="233" height="58" rx="29" fill="none" stroke="#13AE85" stroke-width="5" stroke-linecap="round"
+                    className="md:w-[258px] w-[178px] h-[58px]"
+                    x="1" y="1" rx="29" fill="none" stroke="#13AE85" strokeWidth="5" strokeLinecap="round"
                     initial={{ pathLength: 0, pathOffset: 1 }}
                     animate={ isSending && {
                         pathLength: [0, 1],
@@ -49,17 +48,16 @@ const LoginButton = ({ isSend, isSending }) => {
                     }}
                 />
             </motion.svg>
-            <motion.svg width="24" height="24"
-                        className="fill-white absolute w-[24px] h-[24px] top-[18px]"
+            <motion.svg width="24" height="24" className="fill-white absolute"
                         initial={{ left: -30 }}
-                        animate={ isSend ? { left: 40 } : { left: -30 } }
+                        animate={ isSend ? { left: "17%", top: '50%', translateX: '-5%', translateY: '-50%' } : { left: '-30px', top: '50%', translateY: '-50%' } }
             >
                 <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z" />
             </motion.svg>
             <motion.span
                 className="absolute"
                 initial={{ left: '50%', top: '50%', translateX: '-50%', translateY: '-50%' }}
-                animate={ isSend ? { left: "55%", top: '50%', translateX: '-50%', translateY: '-50%' } : { left: '50%', top: '50%', translateX: '-50%', translateY: '-50%' } }
+                animate={ isSend ? { left: "61%", top: '50%', translateX: '-60%', translateY: '-50%' } : { left: '50%', top: '50%', translateX: '-50%', translateY: '-50%' } }
             >
                 { isSend ? "Zalogowano" : ( isSending ? `Logowanie${'.'.repeat(dots)}` : "Zaloguj" ) }
             </motion.span>

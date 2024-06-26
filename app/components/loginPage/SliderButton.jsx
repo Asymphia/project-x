@@ -4,7 +4,7 @@ const SliderButton = ({ onClick, isActive }) => {
     return (
         <motion.button
             onClick={onClick}
-            className={`bg-dark-grey h-xs ${isActive ? 'w-3xl cursor-default' : 'w-xs cursor-pointer'} rounded-lg`}
+            className={`bg-dark-grey h-xs ${isActive ? 'w-3xl cursor-default' : 'w-xs cursor-pointer'} rounded-lg scale-100`}
             initial={{ width: "10px" }}
             animate={{ width: isActive ? "30px" : "10px" }}
             transition={{ duration: 0.8 }}

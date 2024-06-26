@@ -2,7 +2,7 @@ import LoginForm from "@/app/components/loginPage/LoginForm";
 
 const FormContainer = () => {
     return (
-        <div className="w-1/2 h-full bg-green rounded-r-lg p-4xl">
+        <div className="lg:w-1/2 w-full h-full bg-gradient-login lg:rounded-r-lg rounded-none xl:p-4xl lg:p-3xl md:p-2xl p-xl">
             <LoginForm />
         </div>
     )

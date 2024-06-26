@@ -4,9 +4,9 @@ import SliderContainer from "@/app/components/loginPage/SliderContainer";
 
 const LoginPage = () => {
     return (
-        <div className="bg-white p-2xl w-screen h-screen">
-            <div className="w-full h-full flex flex-nowrap">
-                <div className="w-1/2 h-full flex flex-col">
+        <div className="bg-white xl:p-2xl lg:p-xl p-0 w-screen h-screen">
+            <div className="w-full h-full flex lg:flex-nowrap flex-wrap">
+                <div className="w-1/2 min-h-full flex-col lg:flex hidden">
                     <Logo />
                     <SliderContainer />
                 </div>

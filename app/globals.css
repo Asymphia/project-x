@@ -4,12 +4,13 @@
 
 @layer base {
     h1 {
-        @apply font-nunito font-bold text-4xl text-dark-grey
+        @apply font-nunito font-bold md:text-4xl text-3xl text-dark-grey
     }
     h4 {
-        @apply font-nunito font-bold text-lg text-dark-grey
+        @apply font-nunito font-bold md:text-lg text-base text-dark-grey
     }
     p.secondary {
-        @apply font-sans font-regular text-sm text-grey;
+        @apply font-sans font-regular md:text-sm text-xs text-grey;
+        @apply font-sans font-regular md:text-sm text-xs text-grey;
     }
 }
