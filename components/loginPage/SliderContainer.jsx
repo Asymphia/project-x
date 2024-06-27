@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import Slide from "@/app/components/loginPage/Slide"
+import Slide from "@/components/loginPage/Slide"
 import { useEffect, useState } from "react"
 import { AnimatePresence } from "framer-motion"
-import SliderButton from "@/app/components/loginPage/SliderButton"
+import SliderButton from "@/components/loginPage/SliderButton"
 
 const SliderContainer = () => {
     const [current, setCurrent] = useState(0)

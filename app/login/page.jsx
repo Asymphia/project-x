@@ -1,6 +1,6 @@
-import Logo from "@/app/components/loginPage/Logo";
-import FormContainer from "@/app/components/loginPage/FormContainer";
-import SliderContainer from "@/app/components/loginPage/SliderContainer";
+import Logo from "@/components/loginPage/Logo"
+import SliderContainer from "@/components/loginPage/SliderContainer"
+import FormContainer from "@/components/loginPage/FormContainer"
 
 const LoginPage = () => {
     return (
